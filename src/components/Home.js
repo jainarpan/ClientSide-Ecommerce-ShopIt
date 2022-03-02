@@ -42,7 +42,6 @@ const Home = ({ match }) => {
     const { loading, products, error, productsCount, resPerPage, filteredProductsCount } = useSelector(state => state.products)
 
     const keyword = match.params.keyword
-
     useEffect(() => {
         if (error) {
             return alert.error(error)
@@ -61,7 +60,6 @@ const Home = ({ match }) => {
     if (keyword) {
         count = filteredProductsCount
     }
-
     return (
         <Fragment>
             {loading ? <Loader /> : (
